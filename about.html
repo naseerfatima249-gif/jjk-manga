@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Manga HUB | Your Trusted Manga Resource</title>
+    <meta name="description" content="Learn about Manga HUB, your trusted destination for manga reading guides, reviews, and community insights. Discover our mission and values.">
+    <link rel="canonical" href="https://jujutsu-kaisen-free-manga.page.dev/about.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --accent: #CD853F;
+            --bg-light: #FDF5E6;
+            --bg-dark: #2C2416;
+            --text-dark: #3E2723;
+            --text-light: #F5F5DC;
+            --border: #DEB887;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--bg-dark);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            padding: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary);
+        }
+        
+        nav {
+            background: var(--primary);
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 5px 10px;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #4A3728 100%);
+            color: var(--text-light);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        main {
+            padding: 60px 0;
+        }
+        
+        article {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .value-card {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .value-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .author-bio {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #4A3728 100%);
+            color: var(--text-light);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .author-bio h3 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .author-bio p {
+            opacity: 0.9;
+        }
+        
+        .author-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .author-social a {
+            color: var(--text-light);
+            padding: 10px 20px;
+            background: var(--primary);
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .author-social a:hover {
+            background: var(--secondary);
+        }
+        
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h4 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .footer-section a {
+            color: var(--text-light);
+            opacity: 0.8;
+        }
+        
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            article {
+                padding: 25px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Manga HUB</div>
+                <div class="social-icons">
+                    <a href="https://medium.com/@jjkmanganews251/jjk-manga-read-guide-for-new-and-returning-fans-aa07d165a523" aria-label="Medium" target="_blank" rel="noopener">M</a>
+                    <a href="https://www.pinterest.com/jjkmanganews/_profile/" aria-label="Pinterest" target="_blank" rel="noopener">P</a>
+                    <a href="https://x.com/jjkmanganews251" aria-label="X Twitter" target="_blank" rel="noopener">X</a>
+                    <a href="https://linktr.ee/jjkmanganews251" aria-label="Linktree" target="_blank" rel="noopener">L</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="author.html">Author</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>About Manga HUB</h1>
+        </div>
+    </section>
+    
+    <main class="container">
+        <article>
+            <h2>Our Story</h2>
+            <p>Welcome to Manga HUB, a dedicated platform created by passionate manga enthusiasts for readers around the world. Our journey began with a simple mission: to provide high-quality reading guides, insightful reviews, and comprehensive resources for manga fans of all experience levels.</p>
+            
+            <p>We understand that navigating the vast world of manga can be overwhelming, especially for newcomers. That's why we've committed ourselves to creating content that helps readers discover, understand, and appreciate the art form we love. Whether you're exploring your first series or seeking deeper analysis of your favorite titles, Manga HUB is here to enhance your reading experience.</p>
+            
+            <h2>Our Mission</h2>
+            <p>At Manga HUB, our mission is to bridge the gap between manga creators and readers by providing accessible, accurate, and engaging content. We believe that every reader deserves quality resources that respect their time and intelligence. Our content is crafted with care, ensuring that both casual readers and dedicated fans find value in what we create.</p>
+            
+            <p>We strive to celebrate the diversity of manga genres, from action-packed shonen series to thought-provoking seinen narratives. By covering a wide range of titles and topics, we aim to introduce readers to stories they might not have discovered otherwise while deepening appreciation for beloved classics.</p>
+            
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Quality Content</h3>
+                    <p>Every article, guide, and review we publish undergoes careful research and editing to ensure accuracy and readability.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Reader-First Approach</h3>
+                    <p>We prioritize our readers' needs, creating content that answers real questions and provides genuine value.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Community Building</h3>
+                    <p>We foster connections between manga fans, encouraging discussions and shared experiences around the stories we love.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Continuous Improvement</h3>
+                    <p>We constantly refine our content and expand our coverage based on reader feedback and industry developments.</p>
+                </div>
+            </div>
+            
+            <h2>What We Offer</h2>
+            <p>Manga HUB provides a variety of resources designed to enhance your manga reading journey:</p>
+            <ul>
+                <li><strong>Reading Guides:</strong> Comprehensive guides that help you navigate complex series, understand reading orders, and discover new titles.</li>
+                <li><strong>Series Overviews:</strong> In-depth looks at popular manga series, covering plot summaries, character analyses, and thematic explorations.</li>
+                <li><strong>Beginner Resources:</strong> Content specifically designed for those new to manga, explaining conventions, terminology, and recommendations for first-time readers.</li>
+                <li><strong>Community Insights:</strong> Curated discussions and fan perspectives that add depth to your understanding of beloved series.</li>
+            </ul>
+            
+            <h2>Join Our Community</h2>
+            <p>Manga HUB is more than a website—it's a community of readers who share a passion for Japanese comics. We invite you to explore our content, share your thoughts, and connect with fellow enthusiasts. Your feedback helps us improve and grow, ensuring that Manga HUB continues to serve the manga community effectively.</p>
+            
+            <p>Thank you for choosing Manga HUB as your companion in the wonderful world of manga. We're honored to be part of your reading journey and look forward to helping you discover countless amazing stories.</p>
+        </article>
+        
+        <aside class="author-bio">
+            <h3>About the Author</h3>
+            <p><strong>Domic</strong></p>
+            <p>Read Manga Online Free</p>
+            <div class="author-social">
+                <a href="https://medium.com/@jjkmanganews251/jjk-manga-read-guide-for-new-and-returning-fans-aa07d165a523" target="_blank" rel="noopener">Medium</a>
+                <a href="https://www.pinterest.com/jjkmanganews/_profile/" target="_blank" rel="noopener">Pinterest</a>
+                <a href="https://x.com/jjkmanganews251" target="_blank" rel="noopener">X (Twitter)</a>
+                <a href="https://linktr.ee/jjkmanganews251" target="_blank" rel="noopener">Linktree</a>
+            </div>
+        </aside>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Manga HUB</h4>
+                    <p>Your trusted source for manga reading guides, reviews, and community insights.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="author.html">Author Page</a></li>
+                        <li><a href="jujutsu-kaisen-beginners-reading-guide.html">Reading Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Manga HUB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

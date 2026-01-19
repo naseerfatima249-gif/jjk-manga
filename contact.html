@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Manga HUB</title>
+    <meta name="description" content="Get in touch with Manga HUB. We'd love to hear from you! Send us your questions, feedback, or suggestions about our manga content.">
+    <link rel="canonical" href="https://jujutsu-kaisen-free-manga.page.dev/contact.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --accent: #CD853F;
+            --bg-light: #FDF5E6;
+            --bg-dark: #2C2416;
+            --text-dark: #3E2723;
+            --text-light: #F5F5DC;
+            --border: #DEB887;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--bg-dark);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            padding: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary);
+        }
+        
+        nav {
+            background: var(--primary);
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 5px 10px;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #4A3728 100%);
+            color: var(--text-light);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        .page-header p {
+            margin-top: 15px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        main {
+            padding: 60px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        article {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-form button {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background: var(--secondary);
+        }
+        
+        .contact-info-card {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .contact-info-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateX(5px);
+        }
+        
+        .social-link-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .author-bio {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #4A3728 100%);
+            color: var(--text-light);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .author-bio h3 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .author-bio p {
+            opacity: 0.9;
+        }
+        
+        .author-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .author-social a {
+            color: var(--text-light);
+            padding: 10px 20px;
+            background: var(--primary);
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .author-social a:hover {
+            background: var(--secondary);
+        }
+        
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h4 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .footer-section a {
+            color: var(--text-light);
+            opacity: 0.8;
+        }
+        
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            article {
+                padding: 25px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Manga HUB</div>
+                <div class="social-icons">
+                    <a href="https://medium.com/@jjkmanganews251/jjk-manga-read-guide-for-new-and-returning-fans-aa07d165a523" aria-label="Medium" target="_blank" rel="noopener">M</a>
+                    <a href="https://www.pinterest.com/jjkmanganews/_profile/" aria-label="Pinterest" target="_blank" rel="noopener">P</a>
+                    <a href="https://x.com/jjkmanganews251" aria-label="X Twitter" target="_blank" rel="noopener">X</a>
+                    <a href="https://linktr.ee/jjkmanganews251" aria-label="Linktree" target="_blank" rel="noopener">L</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="author.html">Author</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Have questions, suggestions, or feedback? We'd love to hear from you! Reach out through any of the methods below.</p>
+        </div>
+    </section>
+    
+    <main class="container">
+        <div class="contact-grid">
+            <article>
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" action="#" method="post">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                    
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </article>
+            
+            <article>
+                <h2>Connect With Us</h2>
+                <div class="contact-info-card">
+                    <h3>Response Time</h3>
+                    <p>We typically respond to all inquiries within 24-48 hours. For urgent matters, connecting through our social media channels may provide faster responses.</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <h3>Content Suggestions</h3>
+                    <p>Have a manga series you'd like us to cover? Suggestions for reading guides or content improvements are always welcome!</p>
+                </div>
+                
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="https://medium.com/@jjkmanganews251/jjk-manga-read-guide-for-new-and-returning-fans-aa07d165a523" class="social-link" target="_blank" rel="noopener">
+                        <span class="social-link-icon">M</span>
+                        <span>Follow us on Medium</span>
+                    </a>
+                    <a href="https://www.pinterest.com/jjkmanganews/_profile/" class="social-link" target="_blank" rel="noopener">
+                        <span class="social-link-icon">P</span>
+                        <span>Follow us on Pinterest</span>
+                    </a>
+                    <a href="https://x.com/jjkmanganews251" class="social-link" target="_blank" rel="noopener">
+                        <span class="social-link-icon">X</span>
+                        <span>Follow us on X (Twitter)</span>
+                    </a>
+                    <a href="https://linktr.ee/jjkmanganews251" class="social-link" target="_blank" rel="noopener">
+                        <span class="social-link-icon">L</span>
+                        <span>View our Linktree</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+        
+        <aside class="author-bio">
+            <h3>About the Author</h3>
+            <p><strong>Domic</strong></p>
+            <p>Read Manga Online Free</p>
+            <div class="author-social">
+                <a href="https://medium.com/@jjkmanganews251/jjk-manga-read-guide-for-new-and-returning-fans-aa07d165a523" target="_blank" rel="noopener">Medium</a>
+                <a href="https://www.pinterest.com/jjkmanganews/_profile/" target="_blank" rel="noopener">Pinterest</a>
+                <a href="https://x.com/jjkmanganews251" target="_blank" rel="noopener">X (Twitter)</a>
+                <a href="https://linktr.ee/jjkmanganews251" target="_blank" rel="noopener">Linktree</a>
+            </div>
+        </aside>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Manga HUB</h4>
+                    <p>Your trusted source for manga reading guides, reviews, and community insights.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="author.html">Author Page</a></li>
+                        <li><a href="jujutsu-kaisen-beginners-reading-guide.html">Reading Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Manga HUB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
